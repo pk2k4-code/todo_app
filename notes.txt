@@ -1,2 +1,5 @@
 // usually the first step is to grab all the elements by their Id.
-// wrap the whole code at start in DOMContentLoaded event listener.
+
+// wrap the whole code at start in DOMContentLoaded event listener, so that when the website is loaded the code works only if the dom content is loaded
+
+// JSON.stringify() is a method that converts a JavaScript object or value to a JSON string. It takes one parameter which is the value to convert and it returns a JSON string representation of the value. In this case, we are converting the tasks array into a JSON string so that we can store it in local storage.JSON is a lightweight data interchange format that is easy for humans to read and write, and easy for machines to parse and generate. It is based on a subset of the JavaScript Programming Language, Standard ECMA-262 3rd Edition - December 1999. JSON is a text format that is completely language independent but uses conventions that are familiar to programmers of the C-family of languages, including C, C++, C#, Java, JavaScript, Perl, Python, and many others. These properties make JSON an ideal data interchange language.
