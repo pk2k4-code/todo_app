@@ -1,0 +1,2 @@
+// usually the first step is to grab all the elements by their Id.
+// wrap the whole code at start in DOMContentLoaded event listener.
