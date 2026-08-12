@@ -45,7 +45,7 @@ function renderTask(task) {
     })
 
     // query selector is another way to select elements in the DOM, it allows us to select elements using CSS selectors, like classes(.class), ids(#id), or attributes. In this case, we are selecting the button element that is a child of the list item (li) we just created.
-    li.querySelector("button").addEventListener("click", (e) => {
+    li.querySelector("button").addEventListener("click", (e) => {   // here we used query selector and nt getElementById because we want to select the button that is a child of the list item (li) we just created, and not any other button in the DOM. If we used getElementById, it would select the first button it finds in the DOM, which is not what we want.
         e.stopPropagation(); // we prevent the click event from bubbling up to the list item
         tasks = tasks.filter((t) => t.id !== task.id); // we remove the task from the tasks array
         saveTasks(); // we save the updated tasks array to local storage
