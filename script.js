@@ -46,7 +46,7 @@ function renderTask(task) {
 
     // query selector is another way to select elements in the DOM, it allows us to select elements using CSS selectors, like classes(.class), ids(#id), or attributes. In this case, we are selecting the button element that is a child of the list item (li) we just created.
     li.querySelector("button").addEventListener("click", (e) => {   // here we used query selector and nt getElementById because we want to select the button that is a child of the list item (li) we just created, and not any other button in the DOM. If we used getElementById, it would select the first button it finds in the DOM, which is not what we want.
-        e.stopPropagation(); // we prevent the click event from bubbling up to the list item
+        e.stopPropagation(); // we prevent the click event from bubbling up to the list item, this is important becasue in js events bubble up from target elements to their parent elements, lke if the event click happens on the button element here which is inside the li element, then after button it would also check if li has an event listener for click, and if it does then it will execute which we dont want, so we stop the event from bubbling up to the li element, or potentially more upward elements.
         tasks = tasks.filter((t) => t.id !== task.id); // we remove the task from the tasks array
         saveTasks(); // we save the updated tasks array to local storage
         // instead of below code we could just remove the li element from the DOM, but we are re-rendering the whole list so that we can see clearly what element got deleted without the need of refreshing the page.
